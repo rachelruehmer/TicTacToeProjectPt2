@@ -26,8 +26,13 @@ function clickedCell(cell) {
         checkWin()
         if (shape == 'X') {
             shape = 'O'
+            let snd = new Audio("Rooster Crowing-SoundBible.com-43612401.mp3");
+            snd.play();
         }
-        else { shape = 'X' }
+        else { shape = 'X' 
+        let snd = new Audio("Rooster Crowing-SoundBible.com-43612401.mp3");
+            snd.play();
+    }
 
     };
 };
