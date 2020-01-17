@@ -2,6 +2,7 @@
 h1 {
     color: rgb(0, 0, 0);
     font-family: 'Slabo 27px', serif;
+    font-size: 60px;
 
 }
 #board {
@@ -15,6 +16,7 @@ h1 {
     width: 100px;
     float: left;
     clear: right;
+    font-size: 50px;
  }
 .row {
     margin: 0 auto;
@@ -45,7 +47,6 @@ h1 {
     cursor: pointer;
     font-family: 'Slabo 27px', serif;
 
-
 }
 
 body {
@@ -54,7 +55,7 @@ body {
 } 
 
 img {
-    margin: 66px ;
+    margin: 62px ;
     display: inline-block;
     inline-size: 200px;
 }
