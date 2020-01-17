@@ -1,6 +1,8 @@
 
 h1 {
-    color: black;
+    color: rgb(0, 0, 0);
+    font-family: 'Slabo 27px', serif;
+
 }
 #board {
     padding: 3em;
@@ -41,5 +43,18 @@ h1 {
 
 .top, .middle, .center, .bottom :hover {
     cursor: pointer;
+    font-family: 'Slabo 27px', serif;
 
+
+}
+
+body {
+    background-color: rgb(204, 80, 39);
+
+} 
+
+img {
+    margin: 66px ;
+    display: inline-block;
+    inline-size: 200px;
 }

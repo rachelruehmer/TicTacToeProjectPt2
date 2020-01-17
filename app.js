@@ -1,5 +1,5 @@
 let cells = document.querySelectorAll('.cell');
-let cellCount = 0;
+cellCount = 0;
 let shape = 'X'
 // variables
 
@@ -23,20 +23,49 @@ for (i = 0; i < cells.length; i++) {
 function clickedCell(cell) {
     if (cell.target.textContent == '') {
         cell.target.textContent = shape
-    
+        checkWin()
         if (shape == 'X') {
             shape = 'O'
-        } else
-         { shape = 'X'}
+        }
+        else { shape = 'X' }
+
     };
+};
 
-    function checkWin() {
-        cellcount++
-        for (i = 0; i < wins.length; i++) {
-            let shapeCount = 0;
-            for (j = 0; j < wins[i].length; j++) {
-
+function checkWin() {
+    cellCount++
+    for (i = 0; i < wins.length; i++) {
+        let shapeCount = 0;
+        for (j = 0; j < wins[i].length; j++) {
+            if (wins[i][j].innerHTML == shape) {
+                shapeCount++
+            };
+            if (shapeCount == 3) {
+                alert(shape + ' is a winner winner chicken dinner!')
+                reset()
+                return;
             }
 
-        }
+            if (cellCount == 9 && shapeCount == 3) {
+                alert(shape + ' is a winner winner chicken dinner!')
+                reset()
+                return;
+            }
+            else if (shapeCount != 3 && cellCount == 9) {
+                alert('Ya tied!')
+                reset()
+                return;
+            }
+        };
     };
+};
+
+function reset() {
+    for (i = 0; i < cells.length; i++) {
+        cells[i].innerHTML = ''
+        shape = 'O';
+        cellCount = 0
+    }
+}
+
+
